@@ -74,14 +74,14 @@
           <div id="progress-container" class="flex-1 bg-zinc-200 rounded-full">
             <div
               id="progress"
-              class="w-1/2 h-2 bg-green-600 rounded-full"
+              class="w-full h-2 bg-green-600 rounded-full transition-all duration-1000 ease-linear"
             ></div>
           </div>
-          <p id="progress-percentage" class="text-gray-700">67%</p>
+          <p id="progress-percentage" class="text-gray-700 text-sm">67%</p>
         </div>
       </div>
       <!-- section of the meals and workout list -->
-      <div class="mt-6">
+      <div class="mt-6 mb-6">
         <div class="mycontainer grid grid-cols-2 divide-x divide-gray-400">
           <div class="pr-4">
             <div class="flex items-center justify-between mb-3">
@@ -94,9 +94,9 @@
               type="text"
               id="search-meal"
               placeholder="search meals..."
-              class="my-input"
+              class="my-input mb-4"
             />
-            <div id="food-list"></div>
+            <div id="meals-list" class="space-y-2"></div>
           </div>
           <div class="pl-4">
             <div class="flex items-center justify-between mb-3">
@@ -109,15 +109,18 @@
               type="text"
               id="search-workout"
               placeholder="search workouts..."
-              class="my-input"
+              class="my-input mb-4"
             />
-            <div id="workout-list"></div>
+            <div id="workout-list" class="space-y-2"></div>
           </div>
         </div>
       </div>
     </main>
     <!-- scripts -->
     <script src="./script/utils.js"></script>
+    <script src="./script/CRUDComponents.js"></script>
+    <script src="./script/CRUDManager.js"></script>
+    <script src="./script/ModelComponents.js"></script>
     <script src="./script/model.js"></script>
     <script src="./script/script.js"></script>
   </body>

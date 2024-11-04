@@ -19,7 +19,7 @@ class ModelController {
     });
 
     const card = createCustomElement("div", {
-      class: "relative bg-white max-w-2xl mx-auto mt-4 px-4 py-6 rounded-sm",
+      class: "relative bg-white max-w-2xl mx-auto mt-4 px-8 py-6 rounded-sm",
       children: [
         createCustomElement("h2", { class: "text-xl", children: [title] }),
         child,

@@ -8,12 +8,18 @@ function createCustomElement(tagname, { children = [], ...props }) {
   }
 
   for (const child of children) {
-    if (typeof child === "string") {
-      newEl.appendChild(document.createTextNode(child));
+    if (typeof child === "string" || typeof child === "number") {
+      newEl.appendChild(document.createTextNode(child.toString()));
     } else {
       newEl.appendChild(child);
     }
   }
 
   return newEl;
+}
+
+function sumNumbers(...numbers) {
+  let s = 0;
+  numbers.forEach((n) => (s += n));
+  return s;
 }
