@@ -50,6 +50,7 @@ class CRUDManager {
         _requestdelete: (id) => this.delete(id),
       });
       el.setAttribute("data-id", newItem._id);
+      el.classList.add("crud-item-in");
       this.UIContainer.appendChild(el);
     }
 
@@ -67,8 +68,12 @@ class CRUDManager {
     this._items.splice(itemIdx, 1);
 
     if (updateUI) {
-      this.UIContainer.removeChild(
-        this.UIContainer.querySelector(`div[data-id="${itemId}"]`)
+      const targetEl = this.UIContainer.querySelector(
+        `div[data-id="${itemId}"]`
+      );
+      targetEl.classList.add("crud-item-out");
+      targetEl.addEventListener("animationend", (e) =>
+        this.UIContainer.removeChild(targetEl)
       );
     }
 
