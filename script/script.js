@@ -4,10 +4,8 @@ class MainController {
     this.elements = {
       setDailyLimit: document.getElementById("set-daily-limit"),
       resetDay: document.getElementById("reset-day"),
-
       dailyLimit: document.getElementById("daily-limit"),
       netGain: document.getElementById("net-gain"),
-
       caloriesConsumed: document.getElementById("calories-consumed"),
       caloriesBurned: document.getElementById("calories-burned"),
       caloriesRemaining: document.getElementById("calories-remaining"),
@@ -22,7 +20,7 @@ class MainController {
     this.model = new ModelController();
 
     // properties, the state of the application
-    this.state = { dailyLimit: 0 };
+    this.state = { dailyLimit: 1000 };
 
     // The two major CRUDs
     this.mealsCRUD = new CRUDManager(
